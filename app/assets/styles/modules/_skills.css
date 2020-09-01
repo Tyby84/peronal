@@ -1,0 +1,131 @@
+.skills {
+	height: auto;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.8)), url(../../assets/images/rocket.png);
+	background-size: cover;
+	background-position:;
+	color: #fff;
+	position: relative;
+	@mixin large {
+		clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+	}
+	
+	
+	&__instruct{
+		display: none;
+		@mixin medium{
+			display: block;
+		position: absolute;
+		top: 150px;
+		right: 150px;
+		font-size: 1.1rem;
+		font-weight: 300;
+		text-align: center;
+		}
+	}
+	&__container{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		
+	}
+	
+	&__hexa{
+		height: 85px;
+		width: 85px;
+		clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+		background-color: #222;
+		opacity: .7;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 1rem auto;
+		p{
+			text-align: center;
+			font-size: .9rem;
+			font-weight: 300;
+		}
+		@mixin medium{
+		position: absolute;
+		clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+		transform: rotateZ(90deg);
+		height: 120px;
+		width: 120px;
+		cursor: pointer;
+		opacity: .85;
+			p{
+				transform: rotateZ(-90deg);
+				color: #fff;
+				opacity: 0;
+				}
+		
+		&__html{
+			top: 150px;
+			left: 100px;
+			background-color: #003840;
+			
+		}
+		&__css{
+			top: 210px;
+			left: 200px;
+			background-color: #005A5B;
+			p{
+				
+				padding-left: 8px;
+				@mixin small{
+					padding-left: 0;
+				}
+			}
+		}
+		&__js{
+			top: 275px;
+			left: 300px;
+			background-color: #007369;
+			p{
+				margin-right: -10px;
+				padding-bottom: 5px;
+			}
+		}
+		&__jq{
+			top: 145px;
+			left: 300px;
+			background-color: #008C72;
+		}
+		&__php{
+			top: 210px;
+			left: 400px;
+			background-color: #0d9b6f;
+			p{
+				padding-left: 10px;
+				@mixin small{
+					padding-left: 0;
+				}
+				
+			}
+		}
+		&__wordpress{
+			top: 275px;
+			left: 500px;
+			background-color: #02A676;
+			p{
+				margin-left: -10px;
+				padding-top: 10px;
+			}
+		}
+		&__ga{
+			top: 210px;
+			left: 600px;
+			background-color: #02CF93;
+			p{
+				padding-left: 10px;
+				@mixin small{
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+	}
+		
+	
+}

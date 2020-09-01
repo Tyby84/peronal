@@ -1,0 +1,163 @@
+.nav__mobile {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 5;
+	display: flex;
+	background-color: #406a7ce8;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 70%;
+	transition: all .5s ease-out;
+	@mixin medium{
+		top: 3rem;
+		left: 50%;
+		width: 70%;
+		height: 15rem;
+		
+	}
+	@mixin large{
+		top: 3rem;
+		left: 85%;
+		width: 20rem;
+		height: 15rem;
+		border-top-left-radius: 1.5rem;
+		border-bottom-right-radius: 1.5rem;
+	}
+	&__ul {
+		margin: 0 auto;
+		padding-bottom: 1rem;
+		
+	}
+	&__li {
+		@mixin fixLi;
+		margin: .5rem 0 0 0;
+		text-align: left;
+		border-top-left-radius: 1rem;
+		border-bottom-right-radius: 1rem;
+		transition: all .5s ease-out;
+		&:hover {
+			color: #c9c9c9;
+			
+		}
+	}
+	
+	
+	&--shown {
+		opacity: 1;
+	}
+	
+}
+
+
+
+.menu-bar {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 35px;
+		right: 1.5rem;
+		z-index: 20;
+		cursor: pointer;
+		transition: transform .3s ease-out;
+		animation: barUp 2s ease-out 1s;
+		animation-fill-mode: backwards;
+		 
+	&:hover {
+		transform: scale(.9);
+	}
+		
+		&::before {
+			content: "";
+			position: absolute;
+			top:8px;
+			left:0;
+			width: 20px;
+			height: 3px;
+			background-color: #fff;
+			transition: all .3s ease-out;
+			
+		}
+		&--bar{
+			
+			position: absolute;
+			top:0px;
+			left:0;
+			width: 20px;
+			height: 3px;
+			background-color: #fff;
+			transition: all .3s ease-out;
+	}
+			
+			&::after {
+			content: "";
+			position: absolute;
+			top:16px;
+			left:0;
+			width: 20px;
+			height: 3px;
+			background-color: #fff;
+				transition: all .3s ease-out;
+			}
+			
+		
+	&--close {
+		&::before {
+			
+				transform: rotate(-45deg);
+				top: 5px;
+				background-color: #fff;
+			}
+		.menu-bar--bar {
+			
+			transform: rotate(45deg);
+			top: 5px;
+			background-color: #fff;
+		}
+		&::after {
+				opacity: 0;
+			}
+		
+	}
+	
+	}
+
+@keyframes barUp {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	50%{
+		transform: scale(1.3);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

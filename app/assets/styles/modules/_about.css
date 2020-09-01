@@ -1,0 +1,44 @@
+.about {
+		padding-bottom: 2rem;
+	
+	&--item--container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@mixin medium{
+			flex-direction: row;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			
+		}
+		@mixin large{
+			flex-wrap: nowrap;
+		}
+		
+	}
+	&__item{
+		
+		width: 20rem;
+		@mixin large{
+			width: 17rem;
+		}
+		
+		padding: 0 1rem .5rem 1rem;
+		
+		&__title{
+			text-align: center;
+			color: $main;
+			font-weight: 600;
+			/*border-bottom: 1px solid $text;*/
+		}
+		&__desc{
+		font-weight: 300;
+		color: $text;
+		text-align: center;	
+/*		margin: 0 auto;*/
+		line-height: 1.2;
+		font-size: 1.2rem;
+		}
+	}
+	
+}
